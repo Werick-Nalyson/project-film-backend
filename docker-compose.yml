@@ -1,7 +1,12 @@
 version: "3"
 
 services:
-  mongodb:
+  mongo-teste:
     image: mongo
     ports:
       - 27017:27017
+
+  adminer-teste:
+    image: adminer
+    ports:
+      - 8080:8080
