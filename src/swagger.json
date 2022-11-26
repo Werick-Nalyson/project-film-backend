@@ -1,0 +1,104 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sample API",
+    "description": "Backend API",
+    "version": "1.0.0",
+    "contact": {
+      "E-mail": "wericknalyson@gmail.com",
+      "Linkedin": "https://www.linkedin.com/in/werick-nalyson",
+      "Github": "https://github.com/Werick-Nalyson"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3001",
+      "description": "Development Server"
+    }
+  ],
+  "paths": {
+    "/movies": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "schema": {
+              "type": "integer",
+              "description": "Página que será retornada pela API",
+              "default": 1
+            }
+          }
+        ],
+        "summary": "Retorna a listagem de filmes",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Movie"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/movies/charge-movies": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Carrega/Atualiza o banco de dados com os filmes da API https://ghibliapi.herokuapp.com/#tag/Films",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Movie"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Movie": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "movie_banner": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "director": {
+            "type": "string"
+          },
+          "producer": {
+            "type": "string"
+          },
+          "refId": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
