@@ -1,5 +1,5 @@
 import { GhibliService } from '../../../../services/ghibli.service';
-import { Movie } from '../../../movie.model';
+import { Movie } from '../../movie.model';
 
 class ChargeMoviesUseCase {
   async execute () {

@@ -4,9 +4,4 @@ services:
   mongo-teste:
     image: mongo
     ports:
-      - 27017:27017
-
-  adminer-teste:
-    image: adminer
-    ports:
-      - 8080:8080
+      - 27018:27017
