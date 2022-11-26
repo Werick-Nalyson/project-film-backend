@@ -1,11 +1,11 @@
 import { model, Schema } from 'mongoose';
 
-export const Movie = model('Movie', new Schema({
+export const Film = model('Film', new Schema({
   title: {
     type: String,
     required: true
   },
-  movie_banner: {
+  film_banner: {
     type: String,
     required: true
   },

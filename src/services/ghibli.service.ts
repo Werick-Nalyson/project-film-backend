@@ -7,7 +7,7 @@ class GhibliService {
     this.baseURL = 'https://ghibliapi.herokuapp.com';
   }
 
-  async listAllMovies () {
+  async listAllFilms () {
     const response = await Axios.get(`${this.baseURL}/films?limit=50`);
 
     return response.data;

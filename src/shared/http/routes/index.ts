@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import { movieRoutes } from './movies.routes';
+import { filmRoutes } from './films.routes';
 
 const routes = Router();
 
-routes.use('/movies', movieRoutes);
+routes.use('/films', filmRoutes);
 
 export { routes };
